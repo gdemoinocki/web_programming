@@ -1,0 +1,35 @@
+﻿body {
+    background: #F8F8FF;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+#im1{float:left}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    color: #EE82EE;
+}
+
+.header {
+    text-align: center
+}
+
+.block {
+    margin-left: 20px;
+}
+
+a {
+    color: #EE82EE;
+    text-decoration: none;
+}
+
+img {
+    float: left;
+    margin: 20px;
+}
+
+
+
