@@ -1,6 +1,5 @@
 # coding=windows-1251
 import math
-from os import confstr_names
 
 #проверка на тип int
 def error0(n):
@@ -28,7 +27,7 @@ while(True):
         continue
     
     kat2 = input('Введите длинну второго катета: ')
-    if error1(kat1)==0:
+    if error1(kat2)==0:
         continue
     
     else:
