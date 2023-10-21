@@ -1,39 +1,45 @@
 # coding=windows-1251
 import math
+from os import confstr_names
 
+#РїСЂРѕРІРµСЂРєР° РЅР° С‚РёРї int
 def error0(n):
     try:
         int(n)
     except ValueError:
-        print("Введите число")
+        print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ")
         return 0
     return 1
-
+    
+#РїСЂРѕРІРµСЂРєР° РЅР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ
 def error1(m):
     if error0(m) == 0:
+        
         return 0 
     elif int(m) >= 0:
         return 1
     else:
-        print("Введите положительное число")
+        print("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ")
         return 0    
 
-
 while(True):
-    kat1 = input('введите длинну первого катета: ')
-    kat2 = input('Введите длинну второго катета: ')
-    if error1(kat1)==1 and error1(kat2):
+    kat1 = input('РІРІРµРґРёС‚Рµ РґР»РёРЅРЅСѓ РїРµСЂРІРѕРіРѕ РєР°С‚РµС‚Р°: ')
+    if error1(kat1)==0:
+        continue
+    
+    kat2 = input('Р’РІРµРґРёС‚Рµ РґР»РёРЅРЅСѓ РІС‚РѕСЂРѕРіРѕ РєР°С‚РµС‚Р°: ')
+    if error1(kat1)==0:
+        continue
+    
+    else:
         kat1 = int(kat1)
         kat2= int(kat2)
         S = round((kat1 + kat2) /2, 2)
         hip = round(math.sqrt((kat1**2) + (kat2**2)),2)
         P = round((kat1 + kat2 + hip), 2)
 
-        print('Первый катет =',kat1)
-        print('Второй катет =',kat2)
-        print('Гипотенуза = sqrt(', kat1, '^2 + ', kat2, '^2) = ', hip)
-        print('Площадь прямоугольного треугольника = (', kat1, '+', kat2,')/2 = ', S)
-        print('Периметр прямоугольного треугольника =', kat1, '+', kat2, '+', hip, ' = ', P)
-
-    
-  
+        print('РџРµСЂРІС‹Р№ РєР°С‚РµС‚ =',kat1)
+        print('Р’С‚РѕСЂРѕР№ РєР°С‚РµС‚ =',kat2)
+        print('Р“РёРїРѕС‚РµРЅСѓР·Р° = sqrt(', kat1, '^2 + ', kat2, '^2) = ', hip)
+        print('РџР»РѕС‰Р°РґСЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° = (', kat1, '+', kat2,')/2 = ', S)
+        print('РџРµСЂРёРјРµС‚СЂ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° =', kat1, '+', kat2, '+', hip, ' = ', P)
